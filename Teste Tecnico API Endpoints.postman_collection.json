@@ -1,0 +1,414 @@
+{
+	"info": {
+		"_postman_id": "41903b4d-5579-48db-b66d-46678d3c9553",
+		"name": "Teste Tecnico API Endpoints",
+		"description": "# **Segue a estrutura dos Endpoints**\n\n---\n\n## Usuario\n\n**POST - Criar usuário**\n\n``` json\n{\n    \"nome\": \"Alexsandro\",\n    \"email\": \"AlexsandroCS@gmail.com\",\n    \"senha\": \"123123123a\"\n}\n\n ```\n\n**GET - Login**\n\n``` json\nbody:\n{\n    \"email\": \"AlexsandroCS@gmail.com\",\n    \"senha\": \"123123123a\"\n}\nresponse:\n{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJDU29yZG5hc3hlbEEiLCJzdWIiOiJBbGV4c2FuZHJvLmFjczk4QGdtYWlsLmNvbSIsImlkVXN1YXJpbyI6MSwibm9tZVVzdWFyaW8iOiJBbGV4c2FuZHJvIiwiZXhwIjoxNzI4NDQ0MzAwfQ.rN4THSymcfgK39Y-pFrSrwOu2DgH-ghEmMdmbMBDrwI\"\n}\n\n ```\n\n**GET - Capturar usuário**\n\n``` json\nUrl com o id específico para captura:\nInserir Barer Token na Autorização:\n{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJDU29yZG5hc3hlbEEiLCJzdWIiOiJBbGV4c2FuZHJvLmFjczk4QGdtYWlsLmNvbSIsImlkVXN1YXJpbyI6MSwibm9tZVVzdWFyaW8iOiJBbGV4c2FuZHJvIiwiZXhwIjoxNzI4NDQ0MzAwfQ.rN4THSymcfgK39Y-pFrSrwOu2DgH-ghEmMdmbMBDrwI\"\n}\nresponse:\n{\n    \"id\": 1,\n    \"nome\": \"Alexsandro\",\n    \"email\": \"Alexsandro.acs98@gmail.com\",\n    \"dataCriacao\": \"2024-10-09T02:24:55.869+00:00\"\n}\n\n ```\n\n**PUT - Editar usuário**\n\n``` json\nUrl com o id específico de edição:\nInserir Barer Token na Autorização:\n{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJDU29yZG5hc3hlbEEiLCJzdWIiOiJBbGV4c2FuZHJvLmFjczk4QGdtYWlsLmNvbSIsImlkVXN1YXJpbyI6MSwibm9tZVVzdWFyaW8iOiJBbGV4c2FuZHJvIiwiZXhwIjoxNzI4NDQ0MzAwfQ.rN4THSymcfgK39Y-pFrSrwOu2DgH-ghEmMdmbMBDrwI\"\n}\nbody:\n{\n    \"nome\": \"Alex\",\n    \"email\": \"Alex1198@gmail.com\",\n    \"senha\": \"3213212222b\"\n}\nresponse:\n{\n    \"id\": 1,\n    \"nome\": \"Alexsandro\",\n    \"email\": \"Alexsandro.acs98@gmail.com\",\n    \"dataCriacao\": \"2024-10-09T02:24:55.869+00:00\"\n}\n\n ```\n\n**DELETE - Deletar usuário**\n\n``` json\nUrl com o id específico de exclusão:\ninserir Barer Token na Autorização:\n{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJDU29yZG5hc3hlbEEiLCJzdWIiOiJBbGV4c2FuZHJvLmFjczk4QGdtYWlsLmNvbSIsImlkVXN1YXJpbyI6MSwibm9tZVVzdWFyaW8iOiJBbGV4c2FuZHJvIiwiZXhwIjoxNzI4NDQ0MzAwfQ.rN4THSymcfgK39Y-pFrSrwOu2DgH-ghEmMdmbMBDrwI\"\n}\nPossíveis response:\n{\n    \"Mensagem\": \"Usuário foi deletado com sucesso!\",\n    \"Mensagem\": \"Não é possível deletar usuário!\"\n}\n\n ```\n\n---\n\n## Produto\n\n**POST - Criar Produto**\n\n``` json\ninserir Barer Token na Autorização:\n{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJDU29yZG5hc3hlbEEiLCJzdWIiOiJBbGV4c2FuZHJvLmFjczk4QGdtYWlsLmNvbSIsImlkVXN1YXJpbyI6MSwibm9tZVVzdWFyaW8iOiJBbGV4c2FuZHJvIiwiZXhwIjoxNzI4NDQ0MzAwfQ.rN4THSymcfgK39Y-pFrSrwOu2DgH-ghEmMdmbMBDrwI\"\n}\nbody:\n{\n    \"produto\": \"Carro 2\",\n    \"valor\": \"334.55\"\n}\nresponse:\n{\n    \"produto\": \"Carro 2\",\n    \"valor\": \"334.55\"\n}\n\n ```\n\n**GET - Capturar Produto Específico**\n\n``` json\ninserir Barer Token na Autorização:\n{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJDU29yZG5hc3hlbEEiLCJzdWIiOiJBbGV4c2FuZHJvLmFjczk4QGdtYWlsLmNvbSIsImlkVXN1YXJpbyI6MSwibm9tZVVzdWFyaW8iOiJBbGV4c2FuZHJvIiwiZXhwIjoxNzI4NDQ0MzAwfQ.rN4THSymcfgK39Y-pFrSrwOu2DgH-ghEmMdmbMBDrwI\"\n}\nresponse:\n{\n    \"produto\": \"Carro 2\",\n    \"valor\": \"334.55\"\n}\n\n ```\n\n---\n\n## Pedido\n\n**POST - Criar Pedido**\n\nEm usuárioId precisa colocar o id de um usuário existente.  \nEm produtoIds precisa colocar o id ou vários ids, separado por vírgula se os produtos existirem.\n\n``` json\ninserir Barer Token na Autorização:\n{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJDU29yZG5hc3hlbEEiLCJzdWIiOiJBbGV4c2FuZHJvLmFjczk4QGdtYWlsLmNvbSIsImlkVXN1YXJpbyI6MSwibm9tZVVzdWFyaW8iOiJBbGV4c2FuZHJvIiwiZXhwIjoxNzI4NDQ0MzAwfQ.rN4THSymcfgK39Y-pFrSrwOu2DgH-ghEmMdmbMBDrwI\"\n}\nbody:\n{\n    \"usuarioId\": 3,\n    \"produtoIds\": [1, 3]\n}\n// Exemplo: \"produtoIds\": [1,2,5,10,22]\nresponse:\n{\n    \"id\": 2,\n    \"dataPedido\": \"Wed Oct 09 00:42:27 BRT 2024\",\n    \"usuario\": {\n        \"id\": 3,\n        \"nome\": \"Alexsandro\",\n        \"email\": \"Alex1198@gmail.com\",\n        \"dataCriacao\": \"2024-10-09T03:42:27.012+00:00\"\n    },\n    \"produtos\": [\n        {\n            \"id\": 1,\n            \"produto\": \"Carro 2\",\n            \"valor\": \"334.55\"\n        },\n        {\n            \"id\": 3,\n            \"produto\": \"Notebook \",\n            \"valor\": \"3134.55\"\n        }\n    ]\n}\n\n ```\n\n**GET - Listar Pedidos**\n\n``` json\ninserir Barer Token na Autorização:\n{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJDU29yZG5hc3hlbEEiLCJzdWIiOiJBbGV4c2FuZHJvLmFjczk4QGdtYWlsLmNvbSIsImlkVXN1YXJpbyI6MSwibm9tZVVzdWFyaW8iOiJBbGV4c2FuZHJvIiwiZXhwIjoxNzI4NDQ0MzAwfQ.rN4THSymcfgK39Y-pFrSrwOu2DgH-ghEmMdmbMBDrwI\"\n}\nresponse:\n[\n    {\n        \"id\": 2,\n        \"dataPedido\": \"2024-10-09 00:42:27.012\",\n        \"usuario\": {\n            \"id\": 3,\n            \"nome\": \"Alexsandro\",\n            \"email\": \"Alex1198@gmail.com\",\n            \"dataCriacao\": \"2024-10-09T03:39:45.876+00:00\"\n        },\n        \"produtos\": [\n            {\n                \"id\": 1,\n                \"produto\": \"Carro 2\",\n                \"valor\": \"334.55\"\n            },\n            {\n                \"id\": 3,\n                \"produto\": \"Notebook \",\n                \"valor\": \"3134.55\"\n            }\n        ]\n    }\n]\n\n ```",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26613927"
+	},
+	"item": [
+		{
+			"name": "Usuario - Criar usuário",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Alexsandro\",\n    \"email\": \"AlexsandroCS@gmail.com\",\n    \"senha\": \"123123123a\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuario"
+					]
+				},
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "Login - Logar com usuário",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"AlexsandroCS@gmail.com\",\r\n    \"senha\": \"123123123a\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario - Exibir usuário específico",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJDU29yZG5hc3hlbEEiLCJzdWIiOiJBbGV4MWR3ZHcxOThAZ21haWwuY29tIiwiaWRVc3VhcmlvIjoxLCJub21lVXN1YXJpbyI6IkFsZXhkZGQiLCJleHAiOjE3Mjg0NTMxNTN9.XunIEgbFhvvDMRELueQ9u7WJrwTYeo7e_9M2425uYaw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/usuario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario - Alterar usuário",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful PUT request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJDU29yZG5hc3hlbEEiLCJzdWIiOiJBbGV4c2FuZHJvQ1NAZ21haWwuY29tIiwiaWRVc3VhcmlvIjoxLCJub21lVXN1YXJpbyI6IkFsZXhzYW5kcm8iLCJleHAiOjE3Mjg0NTI5MTh9.cBmJ5JWFfJ8y3UBCMANLR__rz9PJBCFWDvYNLPP7WtM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Alexddd\",\n    \"email\": \"Alex1dwdw198@gmail.com\",\n    \"senha\": \"3213212222db\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/usuario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuario",
+						"1"
+					]
+				},
+				"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario - Deletar usuário",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful DELETE request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/usuario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuario",
+						"1"
+					]
+				},
+				"description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "Produto - Criar produto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJDU29yZG5hc3hlbEEiLCJzdWIiOiJBbGV4MWR3ZHcxOThAZ21haWwuY29tIiwiaWRVc3VhcmlvIjoxLCJub21lVXN1YXJpbyI6IkFsZXhkZGQiLCJleHAiOjE3Mjg0NTMxNTN9.XunIEgbFhvvDMRELueQ9u7WJrwTYeo7e_9M2425uYaw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"produto\": \"Carro 2\",\r\n    \"valor\": \"334.55\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/produto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"produto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Produto - Exibir produto específico",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJDU29yZG5hc3hlbEEiLCJzdWIiOiJBbGV4MWR3ZHcxOThAZ21haWwuY29tIiwiaWRVc3VhcmlvIjoxLCJub21lVXN1YXJpbyI6IkFsZXhkZGQiLCJleHAiOjE3Mjg0NTMxNTN9.XunIEgbFhvvDMRELueQ9u7WJrwTYeo7e_9M2425uYaw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/produto/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"produto",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pedido - Criar pedido",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJDU29yZG5hc3hlbEEiLCJzdWIiOiJBbGV4MWR3ZHcxOThAZ21haWwuY29tIiwiaWRVc3VhcmlvIjoxLCJub21lVXN1YXJpbyI6IkFsZXhkZGQiLCJleHAiOjE3Mjg0NTMxNTN9.XunIEgbFhvvDMRELueQ9u7WJrwTYeo7e_9M2425uYaw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuarioId\": 1,\r\n    \"produtoIds\": [1]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pedido",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pedido"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pedido - Exibir todos os pedidos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJDU29yZG5hc3hlbEEiLCJzdWIiOiJBbGV4MWR3ZHcxOThAZ21haWwuY29tIiwiaWRVc3VhcmlvIjoxLCJub21lVXN1YXJpbyI6IkFsZXhkZGQiLCJleHAiOjE3Mjg0NTMxNTN9.XunIEgbFhvvDMRELueQ9u7WJrwTYeo7e_9M2425uYaw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pedido",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pedido"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://postman-rest-api-learner.glitch.me/"
+		}
+	]
+}
