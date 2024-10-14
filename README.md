@@ -1,8 +1,8 @@
-# Teste técnico Java com SpringBoot
+# APIREST usando Java com SpringBoot
 
 ## Introdução
 
-Teste técnico para desenvolver uma API REST utilizando Java e Spring Boot. A API foi desenvovida para fazer um CRUD em uma entidade de `usuario` que estará protegida com JWT, utilizando Spring Security. A API conta com banco de dados em memória H2 onde o banco de dados é reiniciado toda vez que a aplicação é inicializada.
+Desenvolvi uma API REST utilizando Java e Spring Boot. A API foi desenvovida para fazer um CRUD em uma entidade de `usuario` que estará protegida com JWT, utilizando Spring Security. A API conta com banco de dados em memória H2 onde o banco de dados é reiniciado toda vez que a aplicação é inicializada.
 
 A API além de ter sua entidade principal `usuario`, foi construída com mais 2 entidades que vão fazer um relacionamento básico com a entidade de `usuario`.
 
@@ -275,6 +275,10 @@ response:
 ]
 ```
 
-Linkedin - https://www.linkedin.com/in/alexsandrocs/
+### Contato
 
-Site - https://www.alexsandrocs.com
+**Email:** alexsandro.acs98@gmail.com
+
+**Linkedin:** https://www.linkedin.com/in/alexsandrocs/
+
+**Site:** https://www.alexsandrocs.com
